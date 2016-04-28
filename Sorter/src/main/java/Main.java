@@ -11,20 +11,23 @@ public class Main
         System.out.print("ENTER THE NUMBER OF INTS!"); //Reference
         tosort = s.nextInt();
         int a[] = new int[tosort]; //Can't be an an arraylist, I need SOME point of reference P
-        System.out.println("Enter all the elements:");
+        System.out.println("Enter all ze INTS!:");
         for (int i = 0; i < tosort; i++)
         {
             a[i] = s.nextInt();
+            
+            //To record the ints
         }
         for (int i = 0; i < tosort; i++)
         {
-            for (int j = i + 1; j < tosort; j++)
+            for (int ascend = i + 1; j < tosort; j++)
             {
                 if (a[i] > a[j])
                 {
                     fixer = a[i];
-                    a[i] = a[j];
-                    a[j] = fixer;
+                    a[i] = a[ascend];
+                    a[ascend] = fixer;
+                    //This make sures that the ints are sorted properly
                 }
             }
         }
